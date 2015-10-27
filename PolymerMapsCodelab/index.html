@@ -24,22 +24,26 @@
 
 <body unresolved>
 
-  <google-map latitude="37.779" longitude="-122.3892" zoom="13">
-    <google-map-marker latitude="37.779" longitude="-122.3892" title="Vamos Giants!" draggable="true"></google-map-marker>
-  </google-map>
-  <google-map-directions start-address="San Francisco" end-address="Mountain View"></google-map-directions>
+  <template is="dom-bind">
+    
+    <google-map map="{{map}}" latitude="37.779" longitude="-122.3892" zoom="13">
+      <google-map-marker latitude="37.779" longitude="-122.3892" title="Vamos Giants!" draggable="true"></google-map-marker>
+    </google-map>
+    <google-map-directions map="{{map}}" start-address="{{start}}" end-address="{{end}}"></google-map-directions>
+    
+    <paper-card elevation="2">
+      <paper-icon-item>
+        <iron-icon icon="search" item-icon></iron-icon>
+        <paper-input label="Start address" value="{{start}}"></paper-input>
+      </paper-icon-item>
+      <paper-icon-item>
+        <iron-icon icon="search" item-icon></iron-icon>
+        <paper-input label label="End address" value="{{end}}"></paper-input>
+      </paper-icon-item>
+    </paper-card>
   
-  <paper-card elevation="2">
-    <paper-icon-item>
-      <iron-icon icon="search" item-icon></iron-icon>
-      <paper-input label="Start address" value="San Francisco"></paper-input>
-    </paper-icon-item>
-    <paper-icon-item>
-      <iron-icon icon="search" item-icon></iron-icon>
-      <paper-input label label="End address" value="Mountain View"></paper-input>
-    </paper-icon-item>
-  </paper-card>
-  
+  </template>
+
   <script src="app.js"></script>
 </body>
 </html>
