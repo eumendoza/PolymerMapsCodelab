@@ -9,3 +9,18 @@ paper-card{
   left:25px;
   z-index:1;
 }
+paper-tabs {
+  --paper-tabs-selection-bar-color: #0D47A1;
+  margin-top: 16px;
+}
+paper-tab {
+  --paper-tab-ink: #BBDEFB;
+}
+
+paper-tab iron-icon {
+  margin-right: 10px;
+}
+paper-tab.iron-selected {
+  background: rgb(66, 133, 244);
+  color: white;
+}
